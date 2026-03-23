@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.kanban-column {
+  min-width: 280px;
+}
+
+.task-card-drag {
+  @apply transition-all;
+}
+
+.task-card-drag:hover {
+  box-shadow: 0 12px 40px rgba(17, 28, 45, 0.06);
+  transform: translateY(-2px);
+}
+
+.glass-header {
+  background: rgba(249, 249, 255, 0.82);
+  backdrop-filter: blur(20px);
+}
