@@ -67,7 +67,7 @@ export function mountBoard(outlet: HTMLElement) {
             <span class="material-symbols-outlined text-sm">calendar_today</span>
             <span class="text-[11px] font-medium">${escapeHtml(t.due ?? "—")}</span>
           </div>
-          <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-fixed text-[10px] font-bold text-on-primary-fixed">${t.assigneeInitials ?? "—"}</div>
+          <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-fixed text-[10px] font-bold text-on-primary-fixed">${escapeHtml(t.assigneeInitials ?? "—")}</div>
         </div>
       </article>`
         )

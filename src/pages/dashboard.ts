@@ -149,13 +149,13 @@ export function mountDashboard(outlet: HTMLElement) {
             (t) => `
         <article class="rounded-lg bg-surface-container-lowest p-5 shadow-ambientSoft outline outline-1 outline-outline-variant/5">
           <div class="mb-4 flex items-start justify-between">
-            <span class="${labelToneClass(t.labelTone)}">${t.label}</span>
+            <span class="${labelToneClass(t.labelTone)}">${escapeHtml(t.label)}</span>
             <div class="h-2 w-2 rounded-full ${priorityDot(t.labelTone)}"></div>
           </div>
           <h6 class="mb-2 font-bold text-on-surface">${escapeHtml(t.title)}</h6>
           <p class="mb-6 line-clamp-2 text-xs text-secondary">${escapeHtml(t.description)}</p>
           <div class="flex items-center justify-between">
-            <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-fixed text-[10px] font-bold text-on-primary-fixed">${t.assigneeInitials ?? "—"}</div>
+            <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-fixed text-[10px] font-bold text-on-primary-fixed">${escapeHtml(t.assigneeInitials ?? "—")}</div>
             <button type="button" class="text-[10px] font-bold uppercase text-primary" data-open-task="${t.id}">Open</button>
           </div>
         </article>`
